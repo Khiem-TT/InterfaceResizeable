@@ -1,6 +1,7 @@
 import {Shape} from "./Shape";
+import {Resizeable} from "./Resizeable";
 
-export class Rectangle extends Shape {
+export class Rectangle extends Shape implements Resizeable {
     width: number;
     height: number;
 
@@ -18,5 +19,10 @@ export class Rectangle extends Shape {
 
     calculatePerimeter(): number {
         return (this.width + this.height) * 2;
+    }
+
+    resize() {
+        this.width = (Math.floor(Math.random() * 100 + 1) / 100 + 1) * this.width;
+        this.height = (Math.floor(Math.random() * 100 + 1) / 100 + 1) * this.height;
     }
 }

@@ -17,5 +17,4 @@ export class Cylinder extends Circle {
     calculateVolume(): number {
         return super.calculateArea() * this.height;
     }
-
 }
